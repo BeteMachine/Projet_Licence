@@ -1,0 +1,229 @@
+#!/bin/sh
+#MARICIC Alexandre 11803731
+#Je déclare qu'il s'agit de mon propre travail.
+
+#Initialisation
+fich_agenda=agenda.csv
+
+#Permet de comprendre comment utiliser chaque fonction
+usage()
+{
+	cat <<'FIN'
+Usage :agda -a|--add|-s|--affichage|-h|--help
+	agda --search pattern
+	agda -d|--delete_evenement
+FIN
+}
+
+#Aide l'utilisateur à comprendre l'utilisation des commandes
+aide()
+{
+	usage
+	cat <<FIN
+Sans argument, la commande agda affiche tous les evenement du
+fichier $fich_agenda par ordre croissant
+-a, --add	 ajouter un evenement au fichier
+-h, --help	afficher cette aide et sortir
+--search pattern afficher seulement les evenements dont un champ
+			correspond au motif 'pattern' avec les numéros d'entrées
+			correspondants
+-d, --delete evenement supprimer du fichier l'entrée l'evenement voulu
+FIN
+}
+
+#Triage des dates et heures par ordre croissant
+cp $fich_agenda temp
+sort -n -t "," -k2.7 -k2.4,2.5 -k2.1,2.2 temp >$fich_agenda
+rm temp
+
+#Permet de vérifier si la date est correct (si contient 10 éléments)
+bonne_date()
+{
+	if [ ${#1} -eq 0 ]
+	then
+		continue
+	elif [ ${#1} -ne 10 ]
+		then
+	  	printf "Mauvaise date :)\n"
+	  	exit 1
+	fi
+}
+
+#Permet de vérifier si l'heure est correct (si contient 5 éléments)
+bonne_heure()
+{
+	if [ ${#1} -eq 0 ]
+	then
+		continue
+	elif [ ${#1} -ne 5 ]
+	then
+		printf "Heure invalide :)\n"
+		exit 1
+	fi
+}
+
+#Permet l'affichage de l'agenda
+#Comme mon printf comprend beaucoup de caractère je n'ai pas réussis à
+#utiliser \ afin de couper c'est pour cela que j'ai plus de 80 caractère :(
+affichage()
+{
+	while IFS=',' read -r Subject Start_Date Start_Time End_Date End_Time\
+	All_Day_Event Description People Nombre Location Private
+	do
+		printf '\033[4m\033[31mEvénement\033[0m\033[0m: \033[1m\033[44m%s\033[0m\033[0m\n' "$Subject"
+		printf '\033[4m\033[92mDate de début\033[0m\033[0m: \033[1m%s \033[0m\n' "$Start_Date"
+		printf '\033[4m\033[92mHeure de début\033[0m\033[0m: \033[1m%s \033[0m\n' "$Start_Time"
+		printf '\033[4m\033[92mDate de fin\033[0m\033[0m:,\033[1m%s \033[0m\n' "$End_Date"
+		printf '\033[4m\033[92mHeure de fin\033[0m\033[0m: \033[1m%s \033[0m\n' "$End_Time"
+		if  [ "$All_Day_Event" != "" ]
+		then
+			printf '\033[4m\033[92mToute la journée\033[0m\033[0m: \033[1m%s \033[0m\n' "$All_Day_Event"
+		fi
+		printf '\033[4m\033[92mRemarques\033[0m\033[0m: \033[1m%s \033[0m\n' "$Description"
+		printf '\033[4m\033[92mPersonne présente\033[0m\033[0m: \033[1m%s \033[0m\n' "$People"
+		if [ "$People" = "Oui" ]
+		then
+			printf '\033[4m\033[92mCombien ?\033[0m\033[0m: \033[1m%s \033[0m\n' "$Nombre"
+		fi
+		printf '\033[4m\033[92mLieu\033[0m\033[0m: \033[1m%s \033[0m\n' "$Location"
+		printf '\033[4m\033[92mPrivée\033[0m\033[0m: \033[5m\033[95m%s \033[0m\033[0m\n' "$Private"
+		printf '\033[93m --------- * --------- \033[0m\n'
+	done
+}
+
+#Permet d'ajouter un événement à l'agenda, avec toute les infos
+add()
+{
+	printf 'Evénement prevu dans le mois ? (Oui/Non)\n'
+	read rep
+	if [ "$rep" = "Oui" ]
+	then
+		printf 'Choisisez alors:\n'
+		cal
+	else
+		continue
+	fi
+	printf "\033[4m\033[31mEvénement\033[0m\033[0m: "
+	IFS= read -r evenement
+	printf "\033[4m\033[92mDate de début (jj/mm/yyyy)\033[0m\033[0m: "
+	IFS= read -r date_debut
+	bonne_date "$date_debut"
+	printf "\033[4m\033[92mHeure de début (hh:mm)\033[0m\033[0m: "
+	IFS= read -r heure_debut
+	bonne_heure "$heure_debut"
+	printf "\033[4m\033[92mDate de fin (jj/mm/yyyy)\033[0m\033[0m: "
+	IFS= read -r date_fin
+	bonne_date "$date_fin"
+	printf "\033[4m\033[92mHeure de fin (hh:mm)\033[0m\033[0m: "
+	IFS= read -r heure_fin
+	bonne_heure "$heure_fin"
+	printf "\033[4m\033[92mToute la journée\033[0m\033[0m: "
+	IFS= read -r la_journee
+	printf "\033[4m\033[92mRemarques\033[0m\033[0m: "
+	IFS= read -r remarque
+	printf "\033[4m\033[92mPersonne présente ? (Oui/Non)\033[0m\033[0m: "
+	IFS= read -r personne
+	if [ $personne = "Oui" ]
+	then
+		printf '\033[4m\033[92mCombien ?\033[0m\033[0m: '
+		read combien
+	else
+		continue
+	fi
+	printf "\033[4m\033[92mLieu\033[0m\033[0m: "
+	IFS= read -r lieu
+	printf "\033[4m\033[92mPrivée\033[0m\033[0m: "
+	IFS= read -r privee
+	printf "%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" "$evenement" "$date_debut"\
+	 "$heure_debut" "$date_fin" "$heure_fin"\
+	 "$la_journee" "$remarque" "$personne" "$lieu" "$privee" >>$fich_agenda
+}
+
+#Fonction de recherche permetant de retrouver un événement par mot clé
+search()
+{
+	grep -n "$1" "$fich_agenda" |
+	while IFS=':' read -r num ligne
+	do
+		printf 'Evenement numero: %2d\n' $num
+		printf '%s\n' "$ligne" | affichage
+	done
+}
+
+#Fonction néccessaire pour savoir si un numéro entrer est valide
+nb()
+{
+	case $1 in
+	"" | *[!0-9]*)
+		return 1
+	esac
+	return 0
+}
+
+# Permet de tester si l'argument donné est un numéro d'entrée valide
+nb_entrer()
+{
+	nb_voulu=$(wc -l <$fich_agenda)
+	if ! nb "$1"
+  then
+		printf "Numéro invalide $1 n'est pas un nombre entier positif\n" >&2
+		return 1
+	fi
+	if [ "$1" -lt 1 ] || [ "$1" -gt "$nb_voulu" ]
+	then
+		printf "Numéro invalide $1 n'est pas entre 1 et $nb_voulu\n" >&2
+		return 1
+	fi
+	return 0
+}
+
+#Permet d'effacer un événement de la liste agenda
+delete_evenement()
+{
+	tmp_file=tmp_$fich_agenda
+	sed "$1"d "$fich_agenda" >$tmp_file
+	mv "$tmp_file" "$fich_agenda"
+}
+
+#Repris du fichier informaticiens
+#Exécution des arguments
+case $# in
+0)					#Affichage mis si aucune autre commande n'est donnée
+	affichage <$fich_agenda
+	;;
+1)
+	case $1 in
+	-a | --add)
+		add
+		;;
+	-h | --help)
+		aide
+		;;
+	*)
+		usage >&2
+		exit 1
+	esac
+	;;
+2)
+	case $1 in
+	--search)
+		search "$2"
+		;;
+	-d|--delete)						#Si le numéro est valide permet d'effacer l'événement
+		if nb_entrer "$2"
+		then
+			delete_evenement "$2"
+		else
+			exit 1
+		fi
+		;;
+	*)
+		usage >&2
+		exit 1
+	esac
+	;;
+*)											#Si faute dans la commande, affiche la fonction usage par defaut
+	usage >&2
+	exit 1
+	;;
+esac
