@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="cv-page" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in">
+      <fo:region-body/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="cv-page">
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block font-size="16pt" font-weight="bold" text-align="center">CHEN Kévin</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">
+            Email: chen.kevin1@hotmail.com</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">Adresse: Drancy</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Résumé
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="10pt" color="blue" margin-left="30px">Étudiant L3 Informatique</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Étudiant en L3 Informatique à l'université Sorbonne Paris Nord.</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Expérience
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Serveur en restauration</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: Royal Buffet - Moulins</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: juillet - septembre 2019</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Service et responsable des approvisionnements.</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Serveur en restauration</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: Royal Buffet - Toulouse</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: juin - septembre 2018</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Service et entretien des lieux.</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Vendeur en magasin</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: P.A. Style - Drancy</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: 2016 - présent</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Assistance régulière en magasin de prêt à porter</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Formation
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">Licence</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: Université Sorbonne Paris Nord</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: 2018-present</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">BAC S Option SVT</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: Lycée Eugène Delacroix</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: 2018</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Mention: Assez Bien</fo:block>
+      <fo:block-container>
+        <fo:block>
+          <fo:table>
+            <fo:table-column column-width="33%"/>
+            <fo:table-column column-width="34%"/>
+            <fo:table-column column-width="33%"/>
+            <fo:table-body>
+              <fo:table-row>
+                <fo:table-cell>
+                  <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+                        Compétences
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="red">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>C</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>SQL</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Java</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>HTML/CSS</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>JavaScript</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Python</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                  <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+                        Langues
+                      </fo:block>
+                  <fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Anglais - Niveau C1</fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Mandarin - Langue maternelle</fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Espagnol - Niveau A2</fo:block>
+                  </fo:block>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                  <fo:block font-size="14pt" font-weight="bold" margin-top="10pt">
+                        Loisirs
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="orange">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Casse-tête</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Escalade</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Tir à l'arc</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+            </fo:table-body>
+          </fo:table>
+        </fo:block>
+      </fo:block-container>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

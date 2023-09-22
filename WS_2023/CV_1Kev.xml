@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Skeleton with CV_1.xsd (schema) -->
+<!DOCTYPE CV SYSTEM "CV_1.dtd">
+<CV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CV_1.xsd">
+	<header>
+		<name>CHEN Kévin</name>
+		<email>chen.kevin1@hotmail.com</email>
+		<address>Drancy</address>
+	</header>
+	<summary>
+		<summary_headline>Étudiant L3 Informatique</summary_headline>
+		<summary_description>Étudiant en L3 Informatique à l'université Sorbonne Paris Nord.</summary_description>
+	</summary>
+	<education>
+		<degree>
+			<degree_title>Licence</degree_title>
+			<degree_institution>Université Sorbonne Paris Nord</degree_institution>
+			<degree_dates>2018-present</degree_dates>
+		</degree>
+		<degree>
+			<degree_title>BAC S Option SVT</degree_title>
+			<degree_mention>Assez Bien</degree_mention>
+			<degree_institution>Lycée Eugène Delacroix</degree_institution>
+			<degree_dates>2018</degree_dates>
+		</degree>
+	</education>
+	<experience>
+		<job>
+			<job_title>Serveur en restauration</job_title>
+			<job_company>Royal Buffet - Moulins</job_company>
+			<job_dates>juillet - septembre 2019</job_dates>
+			<job_description>Service et responsable des approvisionnements.</job_description>
+		</job>
+		<job>
+			<job_title>Serveur en restauration</job_title>
+			<job_company>Royal Buffet - Toulouse</job_company>
+			<job_dates>juin - septembre 2018</job_dates>
+			<job_description>Service et entretien des lieux.</job_description>
+		</job>
+		<job>
+			<job_title>Vendeur en magasin</job_title>
+			<job_company>P.A. Style - Drancy</job_company>
+			<job_dates>2016 - présent</job_dates>
+			<job_description>Assistance régulière en magasin de prêt à porter</job_description>
+		</job>
+	</experience>
+	<langues>
+		<langue>Anglais - Niveau C1</langue>
+		<langue>Mandarin - Langue maternelle</langue>
+		<langue>Espagnol - Niveau A2</langue>
+	</langues>
+	<skills>
+		<skill>C</skill>
+		<skill>SQL</skill>
+		<skill>Java</skill>
+		<skill>HTML/CSS</skill>
+		<skill>JavaScript</skill>
+		<skill>Python</skill>
+	</skills>
+	<loisir>
+		<activite>Casse-tête</activite>
+		<activite>Escalade</activite>
+		<activite>Tir à l'arc</activite>
+	</loisir>
+</CV>

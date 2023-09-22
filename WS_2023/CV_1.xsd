@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="CV"> 
+    <xsd:complexType>
+      <xsd:all>
+        <xsd:element name="header" type="headerType"/>
+        <xsd:element name="summary" type="summaryType"/>
+        <xsd:element name="experience" type="experienceType"/>
+        <xsd:element name="education" type="educationType"/>
+        <xsd:element name="langues" type="languesType" minOccurs="0"/>
+        <xsd:element name="skills" type="skillsType"/>
+        <xsd:element name="loisir" type="loisirType" minOccurs="0"/>
+      </xsd:all>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="headerType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="email" type="xsd:string"/>
+      <xsd:element name="address" type="xsd:string" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="summaryType">
+    <xsd:sequence>
+      <xsd:element name="summary_headline" type="xsd:string"/>
+      <xsd:element name="summary_description" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="experienceType">
+    <xsd:sequence>
+      <xsd:element name="job" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="job_title" type="xsd:string"/>
+            <xsd:element name="job_company" type="xsd:string"/>
+            <xsd:element name="job_dates" type="xsd:string"/>
+            <xsd:element name="job_description" type="xsd:string" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="educationType">
+    <xsd:sequence>
+      <xsd:element name="degree" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="degree_title" type="xsd:string"/>
+            <xsd:element name="degree_mention" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="degree_institution" type="xsd:string"/>
+            <xsd:element name="degree_dates" type="xsd:string" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+	<xsd:complexType name="languesType">
+    <xsd:sequence>
+      <xsd:element name="langue" type="xsd:string" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="skillsType">
+    <xsd:sequence>
+      <xsd:element name="skill" type="xsd:string" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="loisirType">
+    <xsd:sequence>
+      <xsd:element name="activite" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

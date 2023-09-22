@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- CV: https://www.cadremploi.fr/editorial/conseils/modeles/exemple-de-cv-de-technicien-informatique -->
+<!-- Skeleton with CV_1.xsd (schema) -->
+<!DOCTYPE CV SYSTEM "CV_1.dtd">
+<CV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CV_1.xsd">
+	<header>
+		<name>Jérôme Pelai</name>
+		<email>hello@reallygreatsite.com</email>
+		<address>Engcobo</address>
+	</header>
+	<summary>
+		<summary_headline>Technicien Informatique</summary_headline>
+		<summary_description>7 ans d'expérience en tant que technicien informatique auprès de publics variés... </summary_description>
+	</summary>
+	<education>
+		<degree>
+			<degree_title>DUT Informatique</degree_title>
+			<degree_institution>IUT de Sceaux</degree_institution>
+		</degree>
+		<degree>
+			<degree_title>BAC Pro Systèmes electroniques numériques</degree_title>
+			<degree_institution>Lycée Jean Moulin</degree_institution>
+		</degree>
+	</education>
+	<experience>
+		<job>
+			<job_title>Technicien informatique</job_title>
+			<job_company>ProTech</job_company>
+			<job_dates>Nov. 2018 - Présent</job_dates>
+			<job_description>Gestion de projets transverses.</job_description>
+            <job_description>Gestion de l'Active Directory.</job_description>
+            <job_description>Gestion des sauvegardes sur Robot ou lecteur DAT.</job_description>
+		</job>
+		<job>
+			<job_title>Technicien maintenance informatique itinérant</job_title>
+			<job_company>PROSERVIA</job_company>
+			<job_dates>Janv. 2015 - Nov 2018</job_dates>
+			<job_description>Maintenance matériel informatique.</job_description>
+            <job_description>Support aux utilisateurs..</job_description>
+            <job_description>Prise en main à distance et sur place.</job_description>
+		</job>
+	</experience>
+	<skills>
+		<skill>Installation et configuration des postes utilisateurs</skill>
+		<skill>Prise en main à distance</skill>
+		<skill>RIS, WDS, MDT</skill>
+		<skill>HTML/CSS</skill>
+		<skill>LAN, WAN, ADSL ...</skill>
+		<skill>Connaissances en environnement virtuel</skill>
+	</skills>
+    <loisir>
+        <activite>Internet</activite>
+        <activite>Sport</activite>
+        <activite>Musique</activite>
+        <activite>Mots croisés</activite>
+        <activite>Voyages</activite>
+    </loisir>
+</CV>

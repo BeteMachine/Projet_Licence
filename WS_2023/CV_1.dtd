@@ -1,0 +1,30 @@
+
+	<!ELEMENT CV ((header, summary, (experience | education ), (education | experience), langues?, skills, loisir?))>
+    <!ELEMENT header (name, email, address?)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT summary (summary_headline, summary_description)>
+    <!ELEMENT summary_headline (#PCDATA)>
+    <!ELEMENT summary_description (#PCDATA)>
+    <!ELEMENT experience (job+)>
+    <!ELEMENT job (job_title, job_company, job_dates, job_description*)>
+    <!ELEMENT job_title (#PCDATA)>
+    <!ELEMENT job_company (#PCDATA)>
+    <!ELEMENT job_dates (#PCDATA)>
+    <!ELEMENT job_description (#PCDATA)>
+    <!ELEMENT education (degree+)>
+    <!ELEMENT degree (degree_title, degree_mention?, degree_institution, degree_dates?)>
+    <!ELEMENT degree_title (#PCDATA)>
+    <!ELEMENT degree_mention (#PCDATA)>
+    <!ELEMENT degree_institution (#PCDATA)>
+    <!ELEMENT degree_dates (#PCDATA)>
+    <!ELEMENT langues (langue+)>
+    <!ELEMENT langue (#PCDATA)>
+    <!ELEMENT skills (skill+)>
+    <!ELEMENT skill (#PCDATA)>
+    <!ELEMENT loisir (activite*)>
+    <!ELEMENT activite (#PCDATA)>
+	<!ATTLIST CV
+          xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation CDATA #FIXED "CV_1.xsd">

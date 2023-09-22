@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="cv-page" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in">
+      <fo:region-body/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="cv-page">
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block font-size="16pt" font-weight="bold" text-align="center">Jérôme Pelai</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">
+            Email: hello@reallygreatsite.com</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">Adresse: Engcobo</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Résumé
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="10pt" color="blue" margin-left="30px">Technicien Informatique</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">7 ans d'expérience en tant que technicien informatique auprès de publics variés... </fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Expérience
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Technicien informatique</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: ProTech</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: Nov. 2018 - Présent</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Gestion de projets transverses.Gestion de l'Active Directory.Gestion des sauvegardes sur Robot ou lecteur DAT.</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Technicien maintenance informatique itinérant</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: PROSERVIA</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: Janv. 2015 - Nov 2018</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Maintenance matériel informatique.Support aux utilisateurs..Prise en main à distance et sur place.</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Formation
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">DUT Informatique</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: IUT de Sceaux</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">BAC Pro Systèmes electroniques numériques</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: Lycée Jean Moulin</fo:block>
+      <fo:block-container>
+        <fo:block>
+          <fo:table>
+            <fo:table-column column-width="33%"/>
+            <fo:table-column column-width="34%"/>
+            <fo:table-column column-width="33%"/>
+            <fo:table-body>
+              <fo:table-row>
+                <fo:table-cell>
+                  <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+                        Compétences
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="red">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Installation et configuration des postes utilisateurs</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Prise en main à distance</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>RIS, WDS, MDT</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>HTML/CSS</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>LAN, WAN, ADSL ...</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Connaissances en environnement virtuel</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                  <fo:block font-size="14pt" font-weight="bold" margin-top="10pt">
+                        Loisirs
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="orange">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Internet</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Sport</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Musique</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Mots croisés</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Voyages</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+            </fo:table-body>
+          </fo:table>
+        </fo:block>
+      </fo:block-container>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

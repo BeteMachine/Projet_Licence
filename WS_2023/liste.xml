@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Skeleton of the liste.xml file -->
+<listeCV xmlns="http://example.org/xmlns/2002/document" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <ancre xlink:type="simple" xlink:href="CV_1Alex.xml">1st CV Alexandre</ancre>
+  <ancre xlink:type="simple" xlink:href="CV_1Kev.xml">1st CV Kevin</ancre>
+  <ancre xlink:type="simple" xlink:href="CV_2.xml">2nd CV</ancre>
+  <ancre xlink:type="simple" xlink:href="CV_3.xml">3rd CV</ancre>
+</listeCV>

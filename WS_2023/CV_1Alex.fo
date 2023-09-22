@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+  <fo:layout-master-set>
+    <fo:simple-page-master master-name="cv-page" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="0.5in" margin-right="0.5in">
+      <fo:region-body/>
+    </fo:simple-page-master>
+  </fo:layout-master-set>
+  <fo:page-sequence master-reference="cv-page">
+    <fo:flow flow-name="xsl-region-body">
+      <fo:block font-size="16pt" font-weight="bold" text-align="center">Maricic Alexandre</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">
+            Email: maricic.alexandre@gmail.com</fo:block>
+      <fo:block font-size="12pt" font-style="italic" text-align="center" color="gray">Adresse: Drancy</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Résumé
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="10pt" color="blue" margin-left="30px">L3 Étudiant</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Étudiant en L3 Informatique a l'université Sorbonne Paris Nord.</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Expérience
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" margin-left="30px" color="blue">Stage</fo:block>
+      <fo:block font-size="12pt" margin-top="4pt" color="gray" margin-left="60px">Entreprise: Mairie de Drancy</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: Dec. 2014 - Janv. 2015</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Description: Assistant technicien.</fo:block>
+      <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+            Formation
+          </fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">BAC</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: Lycée Eugène Delacroix</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: 2018</fo:block>
+      <fo:block font-size="14pt" font-weight="bold" margin-top="6pt" color="blue" margin-left="30px">Licence</fo:block>
+      <fo:block font-size="12pt" margin-top="6pt" color="gray" margin-left="60px">Institution: Université Sorbonne Paris Nord</fo:block>
+      <fo:block font-size="12pt" color="gray" margin-left="60px">Dates: 2018-present</fo:block>
+      <fo:block-container>
+        <fo:block>
+          <fo:table>
+            <fo:table-column column-width="33%"/>
+            <fo:table-column column-width="34%"/>
+            <fo:table-column column-width="33%"/>
+            <fo:table-body>
+              <fo:table-row>
+                <fo:table-cell>
+                  <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+                        Compétences
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="red">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>C</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>HTML</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>CSS</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>JavaScript</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Python</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="red" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>SQL</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                  <fo:block font-size="16pt" font-weight="bold" margin-top="10pt">
+                        Langues
+                      </fo:block>
+                  <fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Anglais - Niveau C1</fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Serbe - Langue maternelle</fo:block>
+                    <fo:block font-size="12pt" color="gray" margin-left="10px">Espagnol - Niveau A2</fo:block>
+                  </fo:block>
+                </fo:table-cell>
+                <fo:table-cell>
+                  <fo:block/>
+                  <fo:block font-size="14pt" font-weight="bold" margin-top="10pt">
+                        Loisirs
+                      </fo:block>
+                  <fo:block font-size="12pt" margin-top="6pt" color="orange">
+                    <fo:list-block>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Basketball</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                      <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()" color="orange" margin-left="10px">
+                          <fo:block>•</fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                          <fo:block>Auto-Mobile</fo:block>
+                        </fo:list-item-body>
+                      </fo:list-item>
+                    </fo:list-block>
+                  </fo:block>
+                </fo:table-cell>
+              </fo:table-row>
+            </fo:table-body>
+          </fo:table>
+        </fo:block>
+      </fo:block-container>
+    </fo:flow>
+  </fo:page-sequence>
+</fo:root>

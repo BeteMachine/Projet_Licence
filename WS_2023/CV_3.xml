@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- CV: https://www.cadremploi.fr/editorial/conseils/modeles/exemple-de-cv-dassistant-comptable -->
+<!-- Skeleton with CV_1.xsd (schema) -->
+<!DOCTYPE CV SYSTEM "CV_1.dtd">
+<CV xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CV_1.xsd">
+	<header>
+		<name>Jérôme Flavin</name>
+		<email>jérômeflavin@monmail.fr</email>
+	</header>
+	<summary>
+		<summary_headline>Assistant Comptable</summary_headline>
+		<summary_description>Titulaire d'un Brevet de Technicien Supérieur en Comptabilité... </summary_description>
+	</summary>
+	<education>
+		<degree>
+			<degree_title>BTS Compatabilité</degree_title>
+			<degree_institution>Lycée de Condorcet</degree_institution>
+		</degree>
+		<degree>
+			<degree_title>BAC ES</degree_title>
+            <degree_mention>Bien</degree_mention>
+			<degree_institution>Lycée Jean Moulin</degree_institution>
+            <degree_dates>2017</degree_dates>
+		</degree>
+	</education>
+	<experience>
+		<job>
+			<job_title>Assistant Compatable</job_title>
+			<job_company>Comptarecherche</job_company>
+			<job_dates>Sept. 2019 - Présent</job_dates>
+			<job_description>Travail avec des feuilles de calcul.</job_description>
+            <job_description>Préparation des comptes statutaires.</job_description>
+            <job_description>Calcul et vérification paiement.</job_description>
+		</job>
+		<job>
+			<job_title>Assistant Comptable (Alternance)</job_title>
+			<job_company>BNP</job_company>
+			<job_dates>Sept. 2018 - Aout 2019</job_dates>
+			<job_description>Suivi de la comptabilité.</job_description>
+            <job_description>Gestion et suivi des factures.</job_description>
+            <job_description>Suivi des dossiers de comptabilité des TPEs et PMEs.</job_description>
+		</job>
+	</experience>
+	<skills>
+		<skill>Bilan Comptable</skill>
+		<skill>Calcul et déclaration</skill>
+		<skill>Fiscalité des entreprises</skill>
+		<skill>Traitement de facture</skill>
+	</skills>
+</CV>
