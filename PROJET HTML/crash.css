@@ -1,0 +1,11 @@
+#conteneur{width: 70%;margin-left: auto; margin-right: auto}
+header{
+background:#ff5555; width: 100%; height: 35px;
+}
+#nav {
+	padding: 0; margin: 0;
+}
+#nav li {
+	display: inline;
+	list-style: none; /* nécessaire pour IE7 */
+}

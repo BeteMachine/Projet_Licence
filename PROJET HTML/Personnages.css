@@ -1,0 +1,94 @@
+body
+{
+  background-image: url(PHOTOS/Fond.jpg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+nav ul
+{
+  margin: :0px; padding: 0px; list-style: none; background-color: #0040FF;
+}
+
+nav li
+{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  line-height: 40px;
+  font-size: x-large;
+  font-family: fantasy;
+}
+nav li a
+{
+  text-decoration: none; color: #FFFFFF; display: block;
+}
+nav li :hover
+{
+  background-color: #3388BB; height: 40px; box-shadow: 10px 5px 5px darkblue;
+}
+header
+{
+  width: 800px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1
+{
+  color: #0040FF;
+  text-align: center;
+  text-decoration: overline  underline ;
+  font-size: 60px;
+  font-family: fantasy;
+}
+table
+{
+  background-color: grey;
+  opacity: 0.9;
+  border: solid black;
+}
+h2
+{
+  color: #ff3300;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 40px;
+}
+.equipe
+{
+  text-align: center;
+}
+a:hover
+{
+    color:purple;
+}
+footer
+{
+  background-color: #0040FF;
+  height: 40px;
+}
+li
+{
+  list-style-type: none;
+  line-height: 40px;
+}
+.arrow:before
+{
+	content: "=> ";
+  clear: both;
+}
+h3
+{
+  text-align: center;
+}
+hr
+{
+  background-color: black;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}

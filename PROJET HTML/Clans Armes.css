@@ -1,0 +1,99 @@
+body
+{
+  background-image: url(PHOTOS/fond_clans_armes.jpg);
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+nav ul
+{
+  margin: :0px; padding: 0px; list-style: none; background-color: #0040FF;
+}
+
+nav li
+{
+  display: inline-block; width: 200px; height: 40px; margin: 0px; padding: 0px; text-align: center; line-height: 40px; font-size: x-large; font-family: fantasy;
+}
+nav li a
+{
+  text-decoration: none; color: #FFFFFF; display: block;
+}
+nav li :hover
+{
+  background-color: #3388BB; height: 40px; box-shadow: 10px 5px 5px darkblue;
+}
+footer
+{
+  background-color: #0040FF;
+  height: 40px;
+}
+.corp
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  height: 1800px;
+  opacity: 0.8;
+}
+.photos
+{
+  width: 250px;
+  float: left;
+  background-color: #0040FF;
+  text-align: center;
+  line-height: 50px
+}
+.description
+{
+  width: 700px;
+  float: right;
+  background-color: #0040FF;
+}
+.texte
+{
+  text-align: justify;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+}
+.texteEnd
+{
+  text-align: justify;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 210px;
+}
+.texte1
+{
+  text-align: justify;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+  height: 220px;
+}
+img
+{
+  width: 200px;
+  height: 200px;
+}
+p
+{
+color: #6600ff;
+Font-Weight: bolder ;
+text-align: center;
+font-size: 22px;
+}
+hr
+{
+  background-color: black;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+h3
+{
+  text-align: center;
+}
