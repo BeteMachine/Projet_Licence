@@ -1,0 +1,76 @@
+<!-- MARICIC Alexandre 11803731
+    CHEN Kévin 11807217 -->
+    
+<!--
+	Vie et mort d'un monstre
+	@author       : Étienne André et al.
+	Created       : < 2020
+	Last modified : 2023/02/13
+-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+      <title>Vie et mort d'un monstre</title>
+      <link rel="stylesheet" href="css/monster.css">
+   </head>
+
+   <body>
+      <style>
+         body {
+           background-image: url('images/background.png');
+         }
+         </style>
+      <h1>Vie et mort d’un monstre</h1>
+      <p>Sélectionnez une image pour votre monstre :</p>
+	<form>
+		<input type="radio" id="default" name="monster" value="default" checked>
+		<label for="default"><img id = "monster" src="images/default.jpeg"/></label>
+		<input type="radio" id="M2" name="monster" value="M2">
+		<label for="M2"><img id = "monster" src="images/M2.png"/></label>
+		<input type="radio" id="M3" name="monster" value="M3">
+		<label for="M3"><img id = "monster" src="images/M3.png"/></label>
+		<input type="radio" id="M4" name="monster" value="M4">
+		<label for="M4"><img id = "monster" src="images/M4.png"/></label>
+		<input type="radio" id="M5" name="monster" value="M5">
+		<label for="M5"><img id = "monster" src="images/M5.png"/></label>
+		<br>
+		<label for="name">Nom du monstre :</label>
+      <input type="text" id="name" value="Bob" /><br>
+		<br>
+		<button id="changeNameButton">Modifier le nom</button>
+	</form>
+      <div id="boitemonster" class="monster">
+         <p id = "monstername">Bouftou</p>
+         <img id = "monster" src="images/default.jpeg"/>
+         <div class="barredevie">
+            <div class="hp" id = "hp"></div>
+          </div>
+      </div>
+
+      <div id="actionbox" class="monster">
+         <p>Monster life log</p>
+      </div>
+
+      <ul id="statut">
+         <li id="pv">Vie : 0</li>
+         <li id="money">Argent : 0</li>
+         <li id="awake">Éveillé</li>
+      </ul>
+
+      <button id="run">Run</button>
+      <button id="fight">Fight</button>
+      <button id="work">Work</button>
+      <button id="sleep">Sleep</button>
+      <button id="eat">Eat</button>
+      <button id="loto">Loto</button>
+      <button id="show">Show</button>
+
+      <hr>
+
+      <button id="new">New life</button>
+      <button id="kill">Kill</button>
+
+      <script src="js/monster.js"></script>
+   </body>
+</html>

@@ -1,0 +1,189 @@
+/** MARICIC Alexandre 11803731
+    CHEN Kévin 11807217 **/
+
+/************************************************************/
+/**
+ * Université Sorbonne Paris Nord, Programmation Web
+ * Auteurs                       : Étienne André et al.
+ * Création                      : <2020
+ * Dernière modification         : 2023/02/13
+ */
+/************************************************************/
+
+.monster {
+    display         : inline-block;
+    vertical-align  : top;
+    height          : 100px;
+    margin-left     : 50px;
+
+}
+
+#boitemonster {
+    width               : 200px;
+    height              : 200px;
+    margin-bottom       : 1em;
+}
+
+#monster {
+    margin-left         : 25px;
+    border-radius       : 60px;
+    border              : solid;
+    border-width        : 2px;
+    width               : 100px;
+    height              : 100px;
+}
+
+#monstername {
+    position: relative;
+    left: 10%;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    margin-left:25px;
+}
+
+#actionbox {
+    border      : 1px solid grey;
+    width       : 50%;
+    overflow    : auto;
+    background-color: azure ;
+}
+
+#actionbox > p {
+    margin: 0 ;
+}
+
+ul#statut {
+    display         : flex;
+    flex-direction  : row;
+    list-style      : none;
+    margin          : 0;
+    padding         : 0;
+    font-family: sans-serif;
+    position: relative;
+    border-style: hidden;
+    left: 50px;
+    margin-left : 20px;
+    margin-right: 20px;
+}
+
+ul#statut li {
+    font-family: sans-serif;
+    position: relative;
+    border-style: hidden;
+    left: 50px;
+    margin-left : 20px;
+    margin-right: 20px;
+}
+
+ul#statut li#pv{
+    font-family:'Lucida Sans Unicode';
+    border-color:limegreen;
+    background-color: rgb(46, 175, 46);
+    border-style:groove;
+}
+
+ul#statut li#money{
+    font-family:'Lucida Sans Unicode';
+    border-color: gold;
+    background-color: goldenrod;
+    border-style:ridge;
+}
+ul#statut li#awake{
+    font-family:'Lucida Sans Unicode';
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-style:solid;
+}
+button
+{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.8s;
+}
+
+
+button#new{
+    background-color: rgb(212, 212, 28);
+}
+button:hover#new{
+    background-color: rgb(219, 243, 0);
+}
+button#kill{
+    background-color: red;
+}
+button:hover#kill{
+    background-color: rgb(138, 13, 38);
+}
+button:hover {
+    background-color: #3e8e41;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+button:disabled{
+    background-color: gray;
+}
+
+.barredevie {
+    width: 80%;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:10px;
+    margin-left:-5px;
+    position: relative;
+}
+  
+.hp {
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
+    transition: width 1px ease-in-out;
+}
+
+#monster.life-1 .hp {
+    background-color: green;
+}
+
+#monster.life-2 .hp {
+    background-color: red;
+}
+  
+#monsterForm {
+    display: block;
+    width: 50%;
+    margin: auto;
+  }
+  
+  #monsterForm h2 {
+    text-align: center;
+  }
+  
+  #monsterForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #monsterForm input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  #monsterForm input[type="text"] {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  #monsterForm button[type="submit"] {
+    display: block;
+    margin: auto;
+  }

@@ -1,0 +1,70 @@
+/** MARICIC Alexandre 11803731
+    CHEN Kévin 11807217 **/
+
+/************************************************************/
+/**
+ * Université Sorbonne Paris Nord, Programmation Web
+ * Auteurs                       : Étienne André et al.
+ * Création                      : <2020
+ * Dernière modification         : 2023/02/13
+ */
+/************************************************************/
+
+.monster {
+    display         : inline-block;
+    vertical-align  : top;
+    height          : 100px;
+    margin-left     : 50px;
+
+}
+
+#boitemonster {
+    width               : 200px;
+    height              : 200px;
+    margin-bottom       : 1em;
+}
+
+#monster {
+    margin              : auto;
+    border-radius       : 5px;
+    background-color    : green;
+    border              : black;
+    border-width        : 20px;
+    width               : 100px;
+    height              : 100px;
+    text-align          : center;
+}
+
+#actionbox {
+    border      : 1px solid grey;
+    width       : 50%;
+    overflow    : auto;
+}
+
+#actionbox > p {
+    margin: 0 ;
+}
+
+ul#statut {
+    display         : flex;
+    flex-direction  : row;
+    list-style      : none;
+    margin          : 0;
+    padding         : 0;
+}
+
+ul#statut li {
+    margin-left : 20px;
+}
+
+button {
+    width               : 75px;
+    height              : 40px;
+    background-color    : deepskyblue;
+    border              : 0;
+    margin-right        : 8px;
+}
+
+button:hover {
+    background-color : dodgerblue;
+}
