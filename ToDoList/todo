@@ -1,0 +1,110 @@
+#!/bin/bash             
+clear                               #Chen Kevin & Maricic Alexandre
+while [ 1 ] #boucle qui permet de rester dans la liste
+do
+	echo -e "\033[1;4mBienvenue dans votre Todo liste. Vous pouvez :\033[0m"
+	echo -e "\033[31m0) Tapez 0 pour Sortir de la liste\033[0m"
+	echo -e "\033[33m1) Tapez 1 pour Ajouter un element\033[0m"
+	echo -e "\033[32m2) Tapez 2 pour Afficher les elements a faire\033[0m"
+	echo -e "\033[36m3) Tapez 3 pour Voir l'historique des elements effectuer\033[0m"
+	echo -e "\033[34m4) Tapez 4 pour Valider une chose faite\033[0m"
+	echo -e "\033[35m5) Tapez 5 pour Vider l'historique des choses faites\033[0m"
+
+	DATE=`date '+%d/%m/%Y a %H:%M:%S'` #Permet de faire un raccourcis qund on utilise la date
+	
+		if [ -f todo_list ] ; then #verification des fichiers a utiliser pour la liste
+		chmod 777 todo_list    #donne tous les droits a l'utilisateur sur le fichier liste_elements
+		read arg
+		else
+			touch todo_list     #creation du fichier liste_elements si non existant
+			chmod 777 todo_list  #donne tous les droits a l'utilisateur sur le fichier liste_elements
+		read arg                       #entrer d'une variable pour naviguer dans le menu
+		fi
+		if [ -f Done ] ; then
+			chmod 777 Done #donne tous les droits a l'utilisateur sur le fichier elements_faits
+		else
+			touch Done       #creation du fichier elements_faits si non existant
+			chmod 777 Done   #donne tous les droits a l'utilisateur sur le fichier elements_faits
+		fi
+
+case $arg in                   #action pour chaque cas
+
+	0) clear
+		echo "Sortie de la Todo liste"
+		echo ""
+		exit ;;
+
+	1)  #Ajout d'element a la liste
+	echo "Que voulez-vous ajouter ?"
+	read element             #insertion de l'elements a faire
+	echo "$element -- ajouté le $DATE" >> todo_list   #ajout de l'element dans la liste
+	clear
+	echo -e "\033[33m$element a bien ete ajouter a la liste\033[0m"
+	echo ""
+	;;
+
+	2) #Affiche la todo liste
+		clear
+		echo -e "\033[1;4;32mAffichage des elements a faire\033[0m"
+		echo ""
+		cat todo_list    #affichage de la liste todo
+		echo ""
+	;;
+
+	3) #affichage des choses faites
+		clear
+		echo -e "\033[1;4;36mVoici l'historique des elements faites\033[0m"
+		echo ""
+		cat  Done  #affichage des choses faites
+		echo ""
+	;;
+
+	4) #rayer un element effectuer de la todo liste et l'ajouter a la liste des choses faites
+		echo "Que voulez-vous validé ?"
+		read chose
+		clear
+		if ( grep -q $chose todo_list ) ; then	  #verification de l'existance de l'element dans la todo liste
+			echo "$chose -- a ete faite le $DATE" >> Done
+			echo "$chose a bien ete valider"
+			sed -i -e "/^$chose/d" todo_list   #si existant ajout de l'element dans la liste des choses faites et supppression del'element dans la todo liste
+		echo ""
+		else
+			echo "L'element n'a pas ete trouver"
+			echo ""
+		fi
+	;;
+
+	5) #Effacer l'historique des choses faites
+		clear
+		echo -e "\033[35mEtes-vous sur de vider l'historique des choses faites ? (n/y)\033[0m"
+		echo ""
+		read reponse
+		while [[ $reponse != y && $reponse != n ]]
+		do
+			echo -e "\033[31mDesoler, nous n'avons pas compris ce que vous voulez.\033[0m Veuillez repondre par y/n"
+		read reponse
+		done
+		if [[ $reponse == y ]] ; then
+			rm Done     #suppression du fichier pour vider l'historique
+			echo "Votre historique a bien ete effacee"
+		else
+			echo "Votre historique n'a pas ete effacee"
+		fi
+		echo ""
+	;;
+
+	*) while [[ $arg != 0 && $arg != 1 ]] ;
+		do
+				echo -e "\033[1;4mDesoler, nous n'avons pas compris ce que vous voulez. Vous pouvez saisir:\033[0m"
+				echo -e "\033[31m0 pour Sortir de la liste\033[0m"
+				echo -e "\033[33m1 pour Recommencer\033[0m"
+		read arg
+		done
+		if [ $arg == 0 ] ; then
+		echo -e "\033[31mSortie de la Todo liste\033[0m"
+		exit
+		fi
+		clear
+	;;
+esac
+done
